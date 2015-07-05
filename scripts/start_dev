@@ -1,0 +1,7 @@
+#!/bin/bash
+
+scripts_dir=$(dirname "$0")
+. "${scripts_dir}/generate"
+docker-compose up -d
+docker attach "${app_name}_web_1"
+docker-compose stop

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+scripts_dir=$(dirname "$0")
+. "${scripts_dir}/generate"
+docker-compose run --rm web $(basename "$0") "$@"
