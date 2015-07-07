@@ -1,6 +1,6 @@
 #!/bin/bash
 
-app_name=$(basename "$(pwd)"|tr -d '-')
+app_name=$(basename "$(pwd)"|tr -d '-'|tr -d '_')
 
 [ -f docker-compose.yml ] || $SHELL docker-compose.yml.sh >docker-compose.yml
 [ -f Dockerfile ] || $SHELL Dockerfile.sh >Dockerfile
